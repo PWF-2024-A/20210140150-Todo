@@ -19,16 +19,21 @@ class DatabaseSeeder extends Seeder
         User::create(
             [
                 'name' => 'Admin',
-
                 'email' => 'admin@admin.com',
-
                 'email_verified_at' => now(),
-
-                'password' => '$2y$10$92IXUNpkj00r0Q5byMi. Ye4oKoEa3Ro911C/.og/at2.uheWG/igi',
-
+                'password' => 'adminkasep',
                 'remember_token' => Str::random(10),
-
                 'is_admin' => true,
+            ]
+        );
+        User::create(
+            [
+                'name' => 'Mochamad Aldi Raihan Fachrizal',
+                'email' => 'aldiraihan@gmail.com',
+                'email_verified_at' => now(),
+                'password' => 'aldikasep',
+                'remember_token' => Str::random(10),
+                'is_admin' => false
             ]
         );
         User::factory(100)->create();
